@@ -1,11 +1,11 @@
 
-import { BrowserRouter,Route,Routes } from 'react-router-dom'
+import {Route,Routes } from 'react-router-dom'
 import Home from './pages/Home';
 import Notes from './pages/Notes';
-import { getWidth } from './context/widthContext';
+import {  useWidth } from './context/WidthContext';
  
 function App() {
- const  widthOfScreen = getWidth()
+ const  widthOfScreen = useWidth()
 
  if(widthOfScreen>=767&& widthOfScreen<1400){
   return <div></div>
